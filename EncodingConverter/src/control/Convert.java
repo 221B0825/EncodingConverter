@@ -8,8 +8,19 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
-public class Convert {
+import ui.MainFrame;
 
+public class Convert {
+	private MainFrame mainFrame;
+
+	public Convert(MainFrame mainFrame) {
+		this.mainFrame = mainFrame;
+	}
+	
+	public void upload() {
+		
+	}
+	
 	public void convert() {
 		String inputFilePath = "data/input";
 		String outputFilePath = "data/output";
@@ -28,5 +39,12 @@ public class Convert {
 			e.printStackTrace();
 		}
 
+	}
+
+
+
+	public void delete() {
+		// TODO Auto-generated method stub
+		
 	}
 }
