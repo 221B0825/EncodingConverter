@@ -36,6 +36,7 @@ public class Convert {
             }
         }
         this.mainFrame.setListModel(selectedFiles);
+        this.mainFrame.updateDisplay();
 	}
 
 	public void convert() {
@@ -61,7 +62,6 @@ public class Convert {
 	                }
 	                writer.write(line);
 	            }
-//	            System.out.println("Finish");
 	        } catch (IOException e) {
 	            e.printStackTrace();
 	        }           
