@@ -2,6 +2,7 @@ package ui;
 
 import java.awt.BorderLayout;
 import java.io.File;
+import java.util.Collection;
 import java.util.List;
 
 import javax.swing.DefaultListModel;
@@ -35,23 +36,26 @@ public class MainFrame extends JFrame{
 		
 		this.isNoFileList = new JLabel("Please Upload Files");
 		this.add(isNoFileList, BorderLayout.CENTER);
-		this.listModel = new DefaultListModel<>();
-		
-		this.listModel.addElement(new File("Test.txt"));
-		
+		this.listModel = new DefaultListModel<>();		
 		this.inputList = new JList<File>(listModel);
 		
+		// display update
 		
         JScrollPane scrollPane = new JScrollPane(this.inputList);
 		this.add(scrollPane, BorderLayout.CENTER);
-	
-		updateDisplay();
-		
+			
 		this.buttonPanel = new ButtonPanel(this.convert);
 		this.add(buttonPanel, BorderLayout.SOUTH);
 	}
+	
+	
 
-	private void updateDisplay() {
-		
+	public void setListModel(DefaultListModel<File> selectedFiles) {
+		this.listModel = selectedFiles;
 	}
+
+	public DefaultListModel<File> getListModel() {
+		return this.listModel;
+	}
+
 }
