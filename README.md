@@ -1,4 +1,4 @@
-# 📖EncodingConverter
+# 📖Encoding Converter
 Convert MS949 to UTF-8
 
 ## Language
